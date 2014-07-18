@@ -1,0 +1,10 @@
+<h1> Dodaj zwierza </h1>
+
+<%= form_for(@animal) do |f| %>
+  <% @animal.errors.full_messages.each do |err| %> 
+    <li><%= err %></li> 
+  <% end %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Zapis mnie" %>
+<% end %>

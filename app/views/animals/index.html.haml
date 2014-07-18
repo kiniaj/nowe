@@ -1,0 +1,6 @@
+%h1 Lista zwierząt
+%ul
+  -@animals.each do |animal|
+    %li
+      =animal.name
+      =link_to "Pokaż", animal_path(animal.id)
